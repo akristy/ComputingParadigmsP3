@@ -1,0 +1,3 @@
+class CopyFile
+
+end
