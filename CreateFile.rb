@@ -1,15 +1,8 @@
-class CreateFile
-    String FileName
-    String FilePath
-
-    def initialize()
-        puts "I am in the CreateFileClass and I am about to create a file."
-    end
-    #Not sure what to put as the parameters. I know that it needs to take a file name and a path
-    #This creates the command
-    def CreateFileCommand(fpath, fname)
-        @FileName = fname
+class CreateFileCommand
+    
+    def initialize(fpath, text)
         @FilePath = fpath
+        @TextForFile = text
     end
 
     #Gives the description of the command and the file path
@@ -19,14 +12,16 @@ class CreateFile
     end
 
     #execute the Create File class
-    def execute()
-        File.new(FileName)
+    def execute
+        new_file = File.new(@FilePath, "w+")
+        new_file.puts(@TextForFile)
+        new_file.close
     end
 
     #Since the undo function is supposed to do the inverse of the command the inverse of creating is deleting 
     #so I delete the file that was created
-    def undo()
-        File.delete(FileName) if File.exist?(FileName)
+    def undo
+        File.delete(@FilePath) if File.exist?(@FilePath)
     end
 
 end
