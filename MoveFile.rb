@@ -22,6 +22,7 @@ class MoveFileCommand
     #Since the undo function is supposed to do the inverse of the command the inverse of creating is deleting 
     #so I delete the file that was created
     def undo()
+        #need to manipulate strings by taking file name off of OldFilePath and adding it onto NewFilePath
         FileUtils.mv(@NewFilePath, @OldFilePath)
     end
 end

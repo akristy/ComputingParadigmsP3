@@ -1,31 +1,27 @@
-class CopyDirectory
-    String OldDirectoryName
-    String NewDirectoryName
-    
-    def initialize()
-        puts "I am in the CopyDirectoryClass and I am about to copy a directory."
-    end
-    #Not sure what to put as the parameters. I know that it needs to take a file name and a path
-    #This creates the command
-    def CopyDirectoryCommand(olddirname, nedirname)
-        @OldDirectoryName = olddirname
-        @NewDirectoryName = newdirname
-    end
+require 'fileutils'
 
+class CopyDirectoryCommand
+     
+    def initialize(olddirpath, newdirpath)
+        #puts "I am in the CopyDirectoryClass and I am about to copy a directory."
+        @OldDirectoryPath = olddirpath
+        @NewDirectoryPath = newdirpath
+    end
+    
     #Gives the description of the command and the file path
     def description()
         #out puts what the command is doing and the path it is taking to do it
-        puts "Copying #{OldDirectoryName} to : #{NewDirectoryName}"
+        puts "Copying #{@OldDirectoryPath} to : #{@NewDirectoryPath}"
     end
 
     #execute the Create Directory class
-    def execute()
-        
+    def execute
+        FileUtils.cp_r(@OldDirectoryPath, @NewDirectoryPath)
     end
 
     #Since the undo function is supposed to do the inverse of the command the inverse of copying is deleting the copy 
     #so I delete the copied directory 
-    def undo()
-        
+    def undo
+        Dir.delete(@NewDirectoryPath) if Dir.exist?(@NewDirectoryPath)
     end
 end
