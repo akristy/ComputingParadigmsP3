@@ -38,8 +38,8 @@ require_relative 'DeleteFile'
 ####################################################################################################################################
 
 #####################################Tests For DeleteFile Class#####################################################################
-#deleteFileCommand = DeleteFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/test.txt", "C:/Users/Alexa_000/Desktop/P3 Practice/test.txt")
-#deleteFileCommand.description()
+deleteFileCommand = DeleteFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/PracticeDelete.txt", "C:/Users/Alexa_000/Desktop/Trash")
+deleteFileCommand.description()
 #deleteFileCommand.execute()
-#deleteFileCommand.undo()
+deleteFileCommand.undo()
 #######################################################################################################################################

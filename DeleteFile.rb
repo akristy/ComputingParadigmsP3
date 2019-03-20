@@ -1,3 +1,5 @@
+require 'fileutils'
+
 class DeleteFileCommand
     
     def initialize(fpath, cfpath)
@@ -14,13 +16,13 @@ class DeleteFileCommand
 
     #execute the Create File class
     def execute()
-        File.copy(@FilePath, @CopiedFilePath)
+        FileUtils.cp(@FilePath, @CopiedFilePath)
         File.delete(@FilePath) if File.exist?(@FilePath)
     end
 
     #Since the undo function is supposed to do the inverse of the command the inverse of deleting is kind of creating 
     #so I move the copied file back to its origial location
     def undo()
-        File.move(@CopiedFilePath, @FilePath)
+        FileUtils.mv(@CopiedFilePath, @FilePath)
     end
 end
