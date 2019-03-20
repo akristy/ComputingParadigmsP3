@@ -8,7 +8,7 @@ class CreateFileCommand
     #Gives the description of the command and the file path
     def description()
         #out puts what the command is doing and the path it is taking to do it
-        puts "Creating a file: #{FilePath}"
+        puts "Creating a file: #{@FilePath}"
     end
 
     #execute the Create File class

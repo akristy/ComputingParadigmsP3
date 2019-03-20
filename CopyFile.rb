@@ -1,36 +1,27 @@
-class CopyFile
-    String FileName
-    String OldFilePath
-    String CopiedFileName
-    String NewFilePath
+class CopyFileCommand
 
-    def initialize()
-        puts "I am in the CopyFileClass and I am about to copy a file."
-    end
-    #Not sure what to put as the parameters. I know that it needs to take a file name and a path
-    #This creates the command
-    def CopyFileCommand(oldfpath, fname, nfpath)
-        @FileName = fname
+    def initialize(oldfpath, nfpath)
+        #puts "I am in the CopyFileClass and I am about to copy a file."
         @OldFilePath = oldfpath
-        @CopiedFileName = "Copied" + fname
         @NewFilePath = nfpath
     end
-
+    
     #Gives the description of the command and the file path
     def description()
         #out puts what the command is doing and the path it is taking to do it
-        puts "Copying #{FileName} from #{OldFilePath} to new position: #{NewFilePath}"
+        puts "Copying file from #{@OldFilePath} to new position: #{@NewFilePath}"
     end
 
     #execute the Copy File class
-    def execute()
-        File.copy(OldFilePath, NewFilePath)
+    def execute
+        new_file = File.copy(@OldFilePath, @NewFilePath)
+        #new_file.close
     end
 
     #Since the undo function is supposed to do the inverse of the command the inverse of copying is deleting 
     #so I delete the file that was copied
-    def undo()
-        File.delete(CopiedFileName) if File.exist?(CopiedFileName)
+    def undo
+        File.delete(@NewFilePath) if File.exist?(@NewFilePath)
     end
 
 
