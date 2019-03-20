@@ -3,6 +3,7 @@ require_relative 'CopyFile'
 require_relative 'MoveFile'
 require_relative 'RenameFile'
 require_relative 'DeleteFile'
+require_relative 'CreateDirectory'
 
 #test1 = CreateFile.new
 #test2 = CreateFile.new
@@ -43,3 +44,12 @@ require_relative 'DeleteFile'
 #deleteFileCommand.execute()
 #deleteFileCommand.undo()
 #######################################################################################################################################
+
+############################################### Directory Tests #######################################################################
+
+######################################Tests For CreateDirectory Class################################################################
+#newDirectoryCommand = CreateDirectoryCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/testdir")
+#newDirectoryCommand.description()
+#newDirectoryCommand.execute()
+#newDirectoryCommand.undo()
+#################################################################################################################################

@@ -13,9 +13,13 @@ class CreateFileCommand
 
     #execute the Create File class
     def execute
-        new_file = File.new(@FilePath, "w+")
-        new_file.puts(@TextForFile)
-        new_file.close
+        if File.exist?(@FilePath) 
+            puts "File already exists!!"
+        else
+            new_file = File.new(@FilePath, "w+")
+            new_file.puts(@TextForFile)
+            new_file.close
+        end
     end
 
     #Since the undo function is supposed to do the inverse of the command the inverse of creating is deleting 
