@@ -2,6 +2,7 @@ require_relative 'CreateFile'
 require_relative 'CopyFile'
 require_relative 'MoveFile'
 require_relative 'RenameFile'
+require_relative 'DeleteFile'
 
 #test1 = CreateFile.new
 #test2 = CreateFile.new
@@ -37,3 +38,10 @@ require_relative 'RenameFile'
 #renameFileCommand.execute()
 #renameFileCommand.undo()
 ####################################################################################################################################
+
+#####################################Tests For DeleteFile Class#####################################################################
+#deleteFileCommand = DeleteFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/test.txt", "C:/Users/Alexa_000/Desktop/P3 Practice/test.txt")
+#deleteFileCommand.description()
+#deleteFileCommand.execute()
+#deleteFileCommand.undo()
+#######################################################################################################################################
