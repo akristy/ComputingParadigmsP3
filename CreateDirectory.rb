@@ -1,12 +1,12 @@
 class CreateDirectory
     String DirectoryName
-    
+
     def initialize()
         puts "I am in the CreateDirectoryClass and I am about to create a directory."
     end
     #Not sure what to put as the parameters. I know that it needs to take a file name and a path
     #This creates the command
-    def CreateFileCommand(dirname)
+    def CreateDirectoryCommand(dirname)
         @DirectoryName = dirname
     end
 
