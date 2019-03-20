@@ -10,7 +10,7 @@ class CopyFile
     #Not sure what to put as the parameters. I know that it needs to take a file name and a path
     #This creates the command
     def CopyFileCommand(oldfpath, fname, nfpath)
-        @Filename = fname
+        @FileName = fname
         @OldFilePath = oldfpath
         @CopiedFileName = "Copied" + fname
         @NewFilePath = nfpath

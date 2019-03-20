@@ -9,7 +9,7 @@ class MoveFile
     #Not sure what to put as the parameters. I know that it needs to take a file name and a path as well as a new path to move the file
     #This creates the command
     def MoveFileCommand(ofpath, fname, nfpath)
-        @Filename = fname
+        @FileName = fname
         @OldFilePath = fpath
         @NewFilePath = nfpath
     end

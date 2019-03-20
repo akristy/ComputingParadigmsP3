@@ -11,7 +11,7 @@ class DeleteFile
     #Not sure what to put as the parameters. I know that it needs to take a file name and a path
     #This creates the command
     def DeleteFileCommand(fpath, fname, cfpath)
-        @Filename = fname
+        @FileName = fname
         @FilePath = fpath
         @CopiedFileName = "copy" + fname
         @CopiedFilePath = cfpath

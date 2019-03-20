@@ -8,7 +8,7 @@ class CreateFile
     #Not sure what to put as the parameters. I know that it needs to take a file name and a path
     #This creates the command
     def CreateFileCommand(fpath, fname)
-        @Filename = fname
+        @FileName = fname
         @FilePath = fpath
     end
 
