@@ -1,3 +1,5 @@
+require 'fileutils'
+
 class CopyFileCommand
 
     def initialize(oldfpath, nfpath)
@@ -14,7 +16,7 @@ class CopyFileCommand
 
     #execute the Copy File class
     def execute
-        new_file = File.copy(@OldFilePath, @NewFilePath)
+        FileUtils.cp(@OldFilePath, @NewFilePath)
         #new_file.close
     end
 

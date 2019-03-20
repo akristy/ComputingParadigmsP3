@@ -17,11 +17,11 @@ require_relative 'DeleteFile'
 #################################################################################################################################
 
 ######################################Tests For CopyFile Class####################################################################
-#copyFileCommand = CopyFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/test.txt", "C:/Users/Alexa_000/Desktop/P3 Move and copy Practice/copiedtext.txt")
-#copyFileCommand.description()
+copyFileCommand = CopyFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/test.txt", "C:/Users/Alexa_000/Desktop/P3 Move and copy Practice/copiedtext.txt")
+copyFileCommand.description()
 #says that the copy method is undefined
 #copyFileCommand.execute()
-#copyFileCOmmand.undo()
+copyFileCommand.undo()
 ####################################################################################################################################
 
 #######################################Tests For MoveFile Class#####################################################################
