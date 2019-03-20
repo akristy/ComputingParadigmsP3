@@ -1,3 +1,5 @@
+require 'fileutils'
+
 class MoveFileCommand
     
     def initialize(ofpath, nfpath)
@@ -14,12 +16,12 @@ class MoveFileCommand
 
     #execute the Move File class
     def execute()
-        File.move(@OldFilePath, @NewFilePath)
+        FileUtils.mv(@OldFilePath, @NewFilePath)
     end
 
     #Since the undo function is supposed to do the inverse of the command the inverse of creating is deleting 
     #so I delete the file that was created
     def undo()
-        File.move(@NewFilePath, @OldFilePath)
+        FileUtils.mv(@NewFilePath, @OldFilePath)
     end
 end
