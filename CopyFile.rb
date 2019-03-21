@@ -1,11 +1,17 @@
 require 'fileutils'
+require 'pathname'
 
 class CopyFileCommand
 
     def initialize(oldfpath, nfpath)
         #puts "I am in the CopyFileClass and I am about to copy a file."
-        @OldFilePath = oldfpath
-        @NewFilePath = nfpath
+        @OldFilePath = Pathname.new(oldfpath)
+        @NewFilePath = Pathname.new(nfpath)
+
+        oldname = @OldFilePath.basename
+        #puts "This is the Old Directory name: #{oldname}"
+        @NewFilePath = "#{@NewFilePath}/copied#{oldname}"
+        #puts "This is the NewDirectory path and name: #{newdirname}"
     end
     
     #Gives the description of the command and the file path
