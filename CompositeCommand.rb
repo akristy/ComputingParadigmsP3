@@ -1,7 +1,7 @@
 class CompositeCommand
 
     def initialize(dirpath)
-        #puts "I am in the CreateDirectoryClass and I am about to create a directory."
+        puts "I am in the CompositeCommandClass."
         
     end
 
