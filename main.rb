@@ -41,10 +41,10 @@ require_relative 'CopyDirectory'
 ####################################################################################################################################
 
 #####################################Tests For DeleteFile Class#####################################################################
-#deleteFileCommand = DeleteFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/PracticeDelete.txt", "C:/Users/Alexa_000/Desktop/Trash")
-#deleteFileCommand.description()
+deleteFileCommand = DeleteFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/PracticeDelete.txt", "C:/Users/Alexa_000/Desktop/Trash")
+deleteFileCommand.description()
 #deleteFileCommand.execute()
-#deleteFileCommand.undo()
+deleteFileCommand.undo()
 #######################################################################################################################################
 
 ############################################### Directory Tests #######################################################################
