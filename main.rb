@@ -11,6 +11,22 @@ require_relative 'RenameDirectory'
 require_relative 'CompositeCommand'
 
 
+
+
+###########################################CompositeCommand Tests#################################################################
+#Composite command doesn't really do anything.
+#newCompositeCommand = CompositeCommand.new
+#newCompositeCommand.addCommand(CreateFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/test.txt", "Hello World!" ))
+#newCompositeCommand.addCommand(CopyFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/test.txt", "C:/Users/Alexa_000/Desktop/P3 Move and copy Practice"))
+#newCompositeCommand.description()
+#newCompositeCommand.stepForward(1)
+#newCompositeCommand.stepBackward(2)
+#newCompositeCommand.execute()
+#newCompositeCommand.undo()
+
+
+###################################################################################################################################
+
 ########################################### File Tests ###########################################################################
 
 ######################################Tests For CreateFile Class################################################################
@@ -96,7 +112,7 @@ require_relative 'CompositeCommand'
 
 
 
-#################################################### Tests for Professor #########################################################
+############################################## Tests for  same directory ad code ######################################################
 
 
 
@@ -198,3 +214,16 @@ require_relative 'CompositeCommand'
 #renameDirectoryCommand.execute()
 #renameDirectoryCommand.undo()
 #################################################################################################################################
+
+###########################################CompositeCommand Tests#################################################################
+#Composite command doesn't really do anything.
+#newCompositeCommand = CompositeCommand.new
+#newCompositeCommand.addCommand(CreateFileCommand.new("./DirForTests/test.txt", "Hello World!" ))
+#newCompositeCommand.addCommand(CopyFileCommand.new("./DirForTests/test.txt", "./DirForTests/Filetestfolder)
+#newCompositeCommand.description()
+#newCompositeCommand.stepForward(1)
+#newCompositeCommand.stepBackward(2)
+#newCompositeCommand.execute()
+#newCompositeCommand.undo()
+
+###################################################################################################################################
