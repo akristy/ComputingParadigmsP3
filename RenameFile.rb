@@ -1,9 +1,14 @@
+require 'pathname'
+
 class RenameFileCommand
 
     def initialize(ofname, nfname)
         #puts "I am in the RenameFileClass and I am about to rename a file."
-        @OldFileName = ofname
-        @NewFileName = nfname
+        @OldFileName = Pathname.new(ofname)
+        
+        odpath = @OldFileName.dirname
+        @NewFileName = "#{odpath}/#{nfname}"
+        puts "New directory name will be: #{@NewFileName}"
     end
     
     #Gives the description of the command and the file path

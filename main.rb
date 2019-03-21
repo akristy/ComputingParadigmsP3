@@ -7,10 +7,8 @@ require_relative 'CreateDirectory'
 require_relative 'CopyDirectory'
 require_relative 'MoveDirectory'
 require_relative 'DeleteDirectory'
+require_relative 'RenameDirectory'
 
-#test1 = CreateFile.new
-#test2 = CreateFile.new
-#test3 = CreateFile.new
 
 ########################################### File Tests ###########################################################################
 
@@ -36,7 +34,7 @@ require_relative 'DeleteDirectory'
 ####################################################################################################################################
 
 ######################################Tests For RenameFile Class####################################################################
-#renameFileCommand = RenameFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/test.txt", "C:/Users/Alexa_000/Desktop/P3 Practice/helloworld.txt")
+#renameFileCommand = RenameFileCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/test.txt", "helloworld.txt")
 #renameFileCommand.description()
 #renameFileCommand.execute()
 #renameFileCommand.undo()
@@ -49,7 +47,11 @@ require_relative 'DeleteDirectory'
 #deleteFileCommand.undo()
 #######################################################################################################################################
 
+
+
 ############################################### Directory Tests #######################################################################
+
+
 
 ######################################Tests For CreateDirectory Class################################################################
 #newDirectoryCommand = CreateDirectoryCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/testdir")
@@ -73,8 +75,15 @@ require_relative 'DeleteDirectory'
 #################################################################################################################################
 
 ######################################Tests For DeleteDirectory Class################################################################
-deleteDirectoryCommand = DeleteDirectoryCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/testdir", "C:/Users/Alexa_000/Desktop/Trash")
-deleteDirectoryCommand.description()
+#deleteDirectoryCommand = DeleteDirectoryCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/testdir", "C:/Users/Alexa_000/Desktop/Trash")
+#deleteDirectoryCommand.description()
 #deleteDirectoryCommand.execute()
-deleteDirectoryCommand.undo()
+#deleteDirectoryCommand.undo()
+#################################################################################################################################
+
+######################################Tests For RenameDirectory Class################################################################
+#renameDirectoryCommand = RenameDirectoryCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/testdir", "helloworldDir")
+#renameDirectoryCommand.description()
+#renameDirectoryCommand.execute()
+#renameDirectoryCommand.undo()
 #################################################################################################################################
