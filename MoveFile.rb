@@ -1,11 +1,12 @@
 require 'fileutils'
+require 'pathname'
 
 class MoveFileCommand
     
     def initialize(ofpath, nfpath)
         #puts "I am in the MoveFileClass and I am about to move a file."
-        @OldFilePath = ofpath
-        @NewFilePath = nfpath
+        @OldFilePath = Pathname.new(ofpath)
+        @NewFilePath = Pathname.new(nfpath)
     end
     
     #Gives the description of the command and the file path
@@ -23,6 +24,11 @@ class MoveFileCommand
     #so I delete the file that was created
     def undo()
         #need to manipulate strings by taking file name off of OldFilePath and adding it onto NewFilePath
+        oldname = @OldFilePath.basename
+        @NewFilePath = "#{@NewFilePath}/#{oldname}"
+        origfolder = @OldFilePath.dirname
+        @OldFilePath = origfolder
+
         FileUtils.mv(@NewFilePath, @OldFilePath)
     end
 end
