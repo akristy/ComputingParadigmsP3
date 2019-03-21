@@ -57,7 +57,7 @@ require_relative 'CopyDirectory'
 #################################################################################################################################
 
 ######################################Tests For CopyDirectory Class################################################################
-#copyDirectoryCommand = CopyDirectoryCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/testdir", "C:/Users/Alexa_000/Desktop/P3 Move and Copy Practice/testdir")
+#copyDirectoryCommand = CopyDirectoryCommand.new("C:/Users/Alexa_000/Desktop/P3 Practice/testdir", "C:/Users/Alexa_000/Desktop/P3 Move and Copy Practice")
 #copyDirectoryCommand.description()
 #copyDirectoryCommand.execute()
 #copyDirectoryCommand.undo()
